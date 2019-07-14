@@ -1,0 +1,38 @@
+<div class="jumbotron bg-light text-warning align-content-center">
+
+
+  <div class=" jumbotron mx-auto width: 200px">
+    <div>
+      <button class="btn btn-secondary btn-block btn-sm col-md-3 mx-auto width: 200px" (click)="cancel()"><i
+          class="fa fa-close"></i>CLOSE TABLE</button>
+    </div><br>
+    <div class="table table-hover table-borderless text-dark table-secondary col-lg-12 ">
+
+      <h4>EMPLOYEE DATA</h4>
+      <th>FIRST NAME</th>
+      <th>LAST NAME</th>
+      <th>DESIGNATION</th>
+      <th>CONTACT NUMBER</th>
+      <th>ADDRESS</th>
+      <th>EDIT</th>
+      <th>DELETE</th>
+      <tr *ngFor="let emp of allEmployee">
+        <td>{{emp.firstname}}</td>
+        <td>{{emp.lastname}}</td>
+        <td>{{emp.designation}}</td>
+        <td>{{emp.contact}}</td>
+        <td>{{emp.address}}</td>
+        <td>
+          <a class="btn">
+            <i class="fa fa-edit" (click)="editEmployee(emp)"></i>
+          </a>
+        </td>
+        <td>
+          <a class="btn text-danger" (click)="deleteEmployee(emp.id)">
+            <i class="fa fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    </div>
+  </div>
+</div>

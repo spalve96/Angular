@@ -1,0 +1,42 @@
+<div class=" jumbotron bg-transparent text-dark ">
+  <h5>EMPLOYEE DETAILS</h5>
+  <div class="jumbotron mx-auto col-md-6 bg-secondary ">
+    <div class="row">
+      <div class="col-md-6 form group">
+        <!-- <input type="hidden" class="form-control" [(ngModel)]="emp.id"> -->
+        <input placeholder="First Name" class="form-control" [(ngModel)]="emp.firstname" required>
+      </div>
+      <div class="col-md-6 form group">
+        <input placeholder="Last Name" class="form-control" [(ngModel)]="emp.lastname" required>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 form group">
+        <input placeholder="Designation" class="form-control" [(ngModel)]="emp.designation" required>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form group">
+        <input placeholder="Contact" class="form-control" [(ngModel)]="emp.contact" required>
+      </div>
+      <div class="col-md-6 form group">
+        <input placeholder="Address" class="form-control" [(ngModel)]="emp.address" required>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 form group">
+        <button class="btn btn-success btn-block btn-sm" (click)="saveEmployee(emp)"> <i class="fa fa-floppy-o"> SUBMIT
+          </i></button>
+      </div>
+      <div class="col-md-4 form group">
+        <button class="btn btn-primary btn-block btn-sm ui" (click)="Reset()"><i class="fa fa-repeat"></i>RESET</button>
+      </div>
+      <div class="col-md-4 form group">
+        <button class="btn btn-danger btn-block btn-sm ui" (click)="cancel()"><i class="fa fa-close"></i>CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container bg-light text-dark" style="text-align: center" id="bgimage">
+    <div class="jumbotron bg-transparent">
+        <h2> WELCOME</h2>
+        <div style="text-align: center">
+            <div>
+                <button class="btn btn-primary" (click)="viewAll()"> View all</button>
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-success" (click)="addNew()"> Add new</button>
+            </div>
+            <div class="md-col-10">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
