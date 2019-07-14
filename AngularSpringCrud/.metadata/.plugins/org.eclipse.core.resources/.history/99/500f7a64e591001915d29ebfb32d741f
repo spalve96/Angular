@@ -1,0 +1,43 @@
+package com.techworm.app.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.techworm.app.model.Employee;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping(value = "/employee")
+public class HomeController {
+	
+	@RequestMapping(value = "/saveEmp")
+	public Employee saveEmployee(@RequestBody Employee employee)
+	{
+		System.out.println("Save Method ");
+		return employee;
+		
+	}
+	@RequestMapping(value = "/updateEmp")
+	public Employee updateEmployee(@RequestBody Employee employee)
+	{
+		System.out.println("Update Method");
+		return employee;
+	}
+	@RequestMapping(value = "/deleteEmp")
+	public void deleteEmployee()
+	{
+		System.out.println("Delete Method");
+	}
+	@RequestMapping(value = "/getAllEmp")
+	public List<Employee> getAllEmployee()
+	{
+		System.out.println("Get all Method");
+		List<Employee> list= new ArrayList<Employee>();
+	}
+
+}

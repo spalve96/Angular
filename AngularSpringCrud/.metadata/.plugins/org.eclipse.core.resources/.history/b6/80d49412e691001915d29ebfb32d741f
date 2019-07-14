@@ -1,0 +1,5 @@
+package com.techworm.app.serviceinterface;
+
+public interface EmployeeInterface {
+
+}

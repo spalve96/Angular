@@ -1,0 +1,40 @@
+package com.techworm.app.serviceimpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.techworm.app.daoimpl.EmployeeRepo;
+import com.techworm.app.model.Employee;
+import com.techworm.app.serviceinterface.EmployeeInterface;
+
+public class EmployeeImpl implements EmployeeInterface{
+
+	@Autowired
+	private EmployeeRepo employeeRepo;
+	@Override
+	public Employee saveEmployee(Employee employee) {
+		
+		return employeeRepo.save(employee);
+	}
+
+	@Override
+	public Employee updateEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}
